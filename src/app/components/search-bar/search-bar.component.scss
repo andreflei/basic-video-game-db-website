@@ -16,6 +16,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
   }
 
   &-input {
@@ -26,6 +27,13 @@
     border-bottom-left-radius: 5px;
     outline: none;
     border: none;
+
+    @media only screen and (max-width: 578px) {
+      justify-self: center;
+      margin-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
 
   &-button {
@@ -41,6 +49,11 @@
     transition-duration: 0.3s;
     cursor: pointer;
 
+    @media only screen and (max-width: 578px) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
     &:hover {
       color: #3700B3;
       background-color: #fff;
@@ -50,9 +63,15 @@
 }
 
 .logo {
-  margin-left: 10px;
+  margin: 0 5px 0 10px;
   color: #fff;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
+  align-self: center;
+
+  @media only screen and (max-width: 578px) {
+    font-size: 14px;
+    text-align: center;
+  }
 }

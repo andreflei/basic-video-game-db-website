@@ -33,7 +33,6 @@
       </ng-container>
     </mat-tab>
     <mat-tab *ngIf="game?.screenshots?.length" label="Screenshots">
-      <!--      TODO load not all images to increase loading speed-->
       <img
         class="game-screenshot"
         *ngFor="let screenshot of game?.screenshots"
