@@ -9,7 +9,7 @@
       <p *ngIf="game?.publishers?.length" class="game-tabs-par">
         Publishers:
         <span *ngFor="let publisher of game?.publishers; let last = last"
-        >{{publisher.name}}<span *ngIf="!last">,</span></span>
+        >{{publisher.name}}<span *ngIf="!last">, </span></span>
       </p>
       <p *ngIf="game?.website" class="game-tabs-par">
         Website:
@@ -19,7 +19,7 @@
           target="_blank"
         >{{game?.website}}</a>
       </p>
-      <div class="game-description" [innerText]="game?.description"></div>
+      <div class="game-description" [innerHTML]="game?.description"></div>
       <p class="game-tabs-votes"></p>
       <ng-container *ngFor="let rating of game?.ratings">
       <span *ngIf="rating.title === 'exceptional'">
@@ -42,13 +42,13 @@
       />
     </mat-tab>
     <mat-tab *ngIf="game?.trailers?.length" label="Trailers">
-      <video
+      <video *ngFor="let trailer of game?.trailers"
         class="game-trailer"
-        controls
-        *ngFor="let trailer of game?.trailers"
+        controls>
+        <source
         src="{{trailer.data?.max}}"
-        type="video/mp4"
-      >Your browser does not support the video tag. Please update your Browser.
+        type="video/mp4">
+      Your browser does not support the video tag. Please update your Browser.
       </video>
     </mat-tab>
   </mat-tab-group>
