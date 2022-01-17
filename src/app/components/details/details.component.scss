@@ -18,6 +18,13 @@
       padding: 10px;
     }
 
+    @media only screen and (max-width: 420px) {
+      width: 80px;
+      height: 80px;
+      display: block;
+      padding: 10px;
+    }
+
     .dial {
       stroke-width: 10;
     }
@@ -40,8 +47,12 @@
 
   .game-gauge {
     position: absolute;
-    top: 50px;
+    top: 40px;
     right: 0;
+
+    @media only screen and (max-width: 420px) {
+      top: 60px;
+    }
 
     &-label {
       font-size: 16px;
@@ -50,8 +61,13 @@
       bottom: 55px;
 
       @media only screen and (max-width: 768px) {
-       font-size: 14px;
+        font-size: 14px;
         bottom: 50px;
+      }
+
+      @media only screen and (max-width: 420px) {
+        font-size: 12px;
+        bottom: 40px;
       }
     }
   }
@@ -78,22 +94,26 @@
 
 
     &-title {
-      font-size: 50px;
+      font-size: 40px;
       color: #fff;
       font-weight: 700;
-      line-height: 50px;
+      line-height: 40px;
       white-space: nowrap;
 
       @media only screen and (max-width: 992px) {
-        font-size: 45px;
+        font-size: 37px;
       }
 
       @media only screen and (max-width: 768px) {
-        font-size: 35px;
+        font-size: 30px;
       }
 
       @media only screen and (max-width: 576px) {
         font-size: 25px;
+      }
+
+      @media only screen and (max-width: 468px) {
+        font-size: 18px;
       }
 
     }

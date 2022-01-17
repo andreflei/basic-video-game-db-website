@@ -4,7 +4,7 @@
       <p *ngIf="game?.parent_platforms?.length" class="game-tabs-par">
         Platforms:
         <span *ngFor="let game of game?.parent_platforms; let last = last"
-        >{{game?.platform?.name}}<span *ngIf="!last">,</span></span>
+        >{{game?.platform?.name}}<span *ngIf="!last">, </span></span>
       </p>
       <p *ngIf="game?.publishers?.length" class="game-tabs-par">
         Publishers:
