@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  BASE_URL: 'https://api.rawg.io/api'
+  BASE_URL: 'https://api.rawg.io/api',
+  key: '***insert your RAWG API-Key***'
 };
 
 /*

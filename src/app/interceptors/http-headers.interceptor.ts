@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {environment as env} from "../../environments/environment";
 
 @Injectable()
 export class HttpHeadersInterceptor implements HttpInterceptor {
@@ -12,7 +13,7 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
 
       },
       setParams: {
-        key: '*****'
+        key: env.key
       }
     });
     return next.handle(req);

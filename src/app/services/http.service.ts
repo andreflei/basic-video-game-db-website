@@ -28,7 +28,6 @@ export class HttpService {
     const gameTrailersRequest = this.http.get(`${env.BASE_URL}/games/${id}/movies`);
     const gameScreenshotsRequest = this.http.get(`${env.BASE_URL}/games/${id}/screenshots`);
 
-    //TODO rework depreciated?
     return forkJoin({
       gameInfoRequest,
       gameTrailersRequest,
