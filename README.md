@@ -1,5 +1,7 @@
 # BasicVideoGameDbWebsite
 
+This is a basic video game search website for experimental and learning reasons. All game data are provided by the RAWG database api.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
 
 ## Development server
