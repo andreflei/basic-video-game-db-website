@@ -121,11 +121,19 @@
     &-release-date {
       color: #fff;
       font-weight: 700;
+
+      @media only screen and (max-width: 468px) {
+        font-size: 14px;
+      }
     }
 
     &-genres {
       color: #fff;
       font-weight: 700;
+
+      @media only screen and (max-width: 468px) {
+        font-size: 12px;
+      }
     }
   }
 }
